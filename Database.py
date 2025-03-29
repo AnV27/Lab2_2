@@ -1,4 +1,14 @@
 import psycopg2
+import configparser
+
+# doc du lieu tu config file
+config = configparser.ConfigParser()
+config.read("f:/Document/Tổng hợp các môn học/Python Programming/Lab/Lab 2/Bài 2/.ini")
+dbname = config["database"]["dbName"]
+hostname = config["database"]["hostName"]
+password = config["database"]["password"]
+username = config["database"]["userName"]
+port = config.getint("database", "port")
 
 
 class Database:
@@ -12,16 +22,25 @@ class Database:
 
     # phuong thuc cap nhat, chinh sua database
     def execute(self, query, values=None):
-        # thuc hien lenh sql
-        self.cur.execute(query, values or ())
-        # commit cau lenh -> cap nhat table
-        self.conn.commit()
+        try:
+            # thuc hien lenh sql
+            self.cur.execute(query, values or ())
+            # commit cau lenh -> cap nhat table
+            self.conn.commit()
+            return True
+        except Exception as e:
+            print(f"Database execution error: {e}")
+            return False
 
     # lay du lieu tu truy van db
     def fetch(self, query, values=None):
-        self.cur.execute(query, values or ())
-        # tra du lieu
-        return self.cur.fetchall()
+        try:
+            self.cur.execute(query, values or ())
+            # tra du lieu
+            return self.cur.fetchall()
+        except Exception as e:
+            print(f"Database fetch error: {e}")
+            return []
 
     def close(self):
         self.cur.close()
