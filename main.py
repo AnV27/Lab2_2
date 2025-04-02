@@ -29,6 +29,79 @@ mainBorrowBook = BorrowBook(
     return_date="",
 )
 
+# Input mẫu
+# listBooks = [
+#     Book(
+#         book_name="Hừng Đông",
+#         author="Stephenie Meyer",
+#         pages=700,
+#         category="Tiểu thuyết",
+#         release_year=2008,
+#         status=0,
+#         description="Thể loại: Lãng mạn"
+#     ),
+#     Book(
+#         book_name="Thám Tử Conan",
+#         author="Aoyama Gosho",
+#         pages=250,
+#         category="Tiểu thuyết",
+#         release_year=1994,
+#         status=1,
+#         description="Thể loại: Trinh thám"
+#     ),
+#     Book(
+#         book_name="Toán Cao Cấp",
+#         author="Nguyễn Văn A",
+#         pages=420,
+#         category="Giáo khoa",
+#         release_year=2019,
+#         status=0,
+#         description="Môn học: Toán, Cấp độ: Đại học"
+#     ),
+#     Book(
+#         book_name="Ngữ Văn 12",
+#         author="Nguyễn Thị B",
+#         pages=300,
+#         category="Giáo khoa",
+#         release_year=2020,
+#         status=1,
+#         description="Môn học: Ngữ Văn, Cấp độ: THPT"
+#     ),
+#     Book(
+#         book_name="Trí Tuệ Nhân Tạo",
+#         author="Nguyễn Quốc Hùng",
+#         pages=350,
+#         category="Khoa học",
+#         release_year=2021,
+#         status=0,
+#         description="Lĩnh vực: CNTT"
+#     ),
+#     Book(
+#         book_name="Điện Tử Cơ Bản",
+#         author="Lê Văn D",
+#         pages=200,
+#         category="Khoa học",
+#         release_year=2018,
+#         status=2,
+#         description="Lĩnh vực: Điện tử"
+#     ),
+# ]
+
+# for _ in listBooks:
+#     if _.addBook(db):
+#         print("Thành công!")
+
+# Đăng ký thành viên mẫu
+# listMembers = [
+#     Member(member_name="Lê Văn An"),
+#     Member(member_name="Trần Thị B"),
+#     Member(member_name="Lê Văn C"),
+# ]
+
+# for _ in listMembers:
+#     if  _.addMember(db):
+#         print("Thành công!")
+
 # Vòng lặp chính của chương trình
 while True:
     print("\n=== Hệ thống thư viện ===")
